@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<bpr:release xmlns:bpr="http://www.blueprism.co.uk/product/release">
+    <bpr:name>Currency Exchange API</bpr:name>
+    <bpr:release-notes />
+    <bpr:created>2019-09-02 18:21:23Z</bpr:created>
+    <bpr:package-id>2</bpr:package-id>
+    <bpr:package-name>Currency Exchange</bpr:package-name>
+    <bpr:user-created-by>admin</bpr:user-created-by>
+    <bpr:contents count="2">
+        <webapiservice id="b4e5518e-0473-4538-9a4e-2de5590c47ae" name="Currency Exchange API" enabled="true" xmlns="http://www.blueprism.co.uk/product/webapiservice">
+            <configuration baseurl="https://currency-exchange.p.rapidapi.com/" xmlns="">
+                <actions>
+                    <action id="31" name="Get exchange" enabled="true" enableRequestOutputParameter="true" disableSendingOfRequest="false">
+                        <description><![CDATA[exchange ]]></description>
+                        <request httpmethod="GET" urlpath="exchange?q=[q]&amp;from=[from]&amp;to=[to]">
+                            <headers />
+                            <bodycontent type="0"></bodycontent>
+                        </request>
+                        <parameters>
+                            <actionparameter name="from" expose="true" datatype="64">
+                                <initialvalue><![CDATA[SGD]]></initialvalue>
+                                <description><![CDATA[]]></description>
+                            </actionparameter>
+                            <actionparameter name="to" expose="true" datatype="64">
+                                <initialvalue><![CDATA[MYR]]></initialvalue>
+                                <description><![CDATA[]]></description>
+                            </actionparameter>
+                            <actionparameter name="q" expose="true" datatype="16">
+                                <initialvalue><![CDATA[1.0]]></initialvalue>
+                                <description><![CDATA[]]></description>
+                            </actionparameter>
+                        </parameters>
+                        <outputparameters>
+                            <parameters />
+                            <code><![CDATA[]]></code>
+                        </outputparameters>
+                    </action>
+                </actions>
+                <commonparameters />
+                <commonheaders>
+                    <httpheader name="X-RapidAPI-Host" value="currency-exchange.p.rapidapi.com" />
+                    <httpheader name="X-RapidAPI-Key" value="8e2c01c04bmsh94dc2755367385cp16eba8jsnfd10f5fb8858" />
+                </commonheaders>
+                <commonauthentications>
+                    <authentication type="0" />
+                </commonauthentications>
+                <commoncode>
+                    <codeproperties code="" language="visualbasic">
+                        <namespaces>
+                            <namespace>System</namespace>
+                            <namespace>System.Drawing</namespace>
+                            <namespace>System.Data</namespace>
+                        </namespaces>
+                        <references>
+                            <reference>System.dll</reference>
+                            <reference>System.Data.dll</reference>
+                            <reference>System.Xml.dll</reference>
+                            <reference>System.Drawing.dll</reference>
+                        </references>
+                    </codeproperties>
+                </commoncode>
+                <configurationsettings>
+                    <configurationsettings requesttimeout="10" authserverrequesttimeout="10" />
+                </configurationsettings>
+            </configuration>
+        </webapiservice>
+        <tile id="e5fc0b25-c59b-4d5e-8210-2616f348b78e" name="Workforce Availability" type="1" description="Current status of registered resources" autorefresh="0" xmlns="http://www.blueprism.co.uk/product/tile"><![CDATA[<Chart type="6" plotByRow="false"><Procedure name="BPDS_WorkforceAvailability" /></Chart>]]></tile>
+    </bpr:contents>
+</bpr:release>
